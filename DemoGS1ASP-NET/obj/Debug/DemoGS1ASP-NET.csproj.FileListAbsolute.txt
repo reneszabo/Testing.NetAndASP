@@ -1,0 +1,6 @@
+C:\Users\ReneR\documents\visual studio 2013\Projects\GS1-Demo\DemoGS1ASP-NET\bin\DemoGS1ASP-NET.dll.config
+C:\Users\ReneR\documents\visual studio 2013\Projects\GS1-Demo\DemoGS1ASP-NET\bin\DemoGS1ASP-NET.dll
+C:\Users\ReneR\documents\visual studio 2013\Projects\GS1-Demo\DemoGS1ASP-NET\bin\DemoGS1ASP-NET.pdb
+C:\Users\ReneR\documents\visual studio 2013\Projects\GS1-Demo\DemoGS1ASP-NET\obj\Debug\DemoGS1ASP-NET.csprojResolveAssemblyReference.cache
+C:\Users\ReneR\documents\visual studio 2013\Projects\GS1-Demo\DemoGS1ASP-NET\obj\Debug\DemoGS1ASP-NET.dll
+C:\Users\ReneR\documents\visual studio 2013\Projects\GS1-Demo\DemoGS1ASP-NET\obj\Debug\DemoGS1ASP-NET.pdb

@@ -1,0 +1,76 @@
+﻿@model IEnumerable<MyFirstApp.Models.Friend>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Friends List</h2>
+<style type="text/css">
+    .th_action {
+        width: 90px;
+    }
+</style>
+<nav class="navbar navbar-default ">
+    <div class="container-fluid">
+        <div class="">
+            <ul class="nav navbar-nav">
+                <li>
+                    @using (Html.BeginForm("Index", "Friends", FormMethod.Post, new { @class = "navbar-form navbar-left" }))
+                    {
+                        <div class="form-group">
+                            @Html.TextBox("SearchString", null, new { @class = "form-control", placeholder = "Search" })
+                        </div>
+                        <button type="submit" class="btn btn-default" ><i class="fa fa-filter"></i></button>
+                        <a href="@Url.Action("Index", "Friends")" class="btn btn-default" ><i class="fa fa-eraser"></i></a>
+                    }
+                </li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <li>
+                    <a class="" href="@Url.Action("Create", "Friends")"><span class="fa fa-user-plus"></span></a>
+                </li>
+
+            </ul>
+        </div>
+    </div>
+</nav>
+
+
+<table class="table table-bordered table-condensed table-hover table-responsive table-striped">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.FirstName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.LastName)
+        </th>
+        <th class="th_action"></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.FirstName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.LastName)
+            </td>
+            <td class="text-center">
+                @Html.ActionLink("Details", "Details", new { id = item.ID }, new { @class = "btn btn-xs btn-default" })
+                <a class="btn btn-xs btn-default" href="@Url.Action("Edit", "Friends", new { id = item.ID })"><span class="fa fa-edit"></span></a>
+                <a class="btn btn-xs btn-danger" href="@Url.Action("Delete", "Friends", new { id = item.ID })"><span class="fa fa-trash"></span></a>
+
+
+
+            </td>
+        </tr>
+    }
+
+</table>
+@*<script type="text/javascript">
+    $(document).ready(function () {
+        $('#SearchString').focus();
+    });
+
+</script>*@
